@@ -27,7 +27,7 @@ if (isset($_REQUEST['log_in'])){
 
 
 
-	if($_REQUEST['biometric'] == 'yes'){
+	if(!empty($_REQUEST['biometric'])){
 	    $b=mysqli_real_escape_string($dbc,trim($_REQUEST['biometric']));
 	    $biometric=$_REQUEST['biometric'];
 	    echo '<p> </p>';
